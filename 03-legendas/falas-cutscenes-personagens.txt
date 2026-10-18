@@ -1,0 +1,4 @@
+1246	n_
+50	f_
+8	Repeat after me, Vito
+2	Operation Husky

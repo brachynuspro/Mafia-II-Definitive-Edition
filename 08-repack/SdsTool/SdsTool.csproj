@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Nullable>disable</Nullable>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MafiaToolkit"><HintPath>..\..\02-ferramentas\MafiaToolkit\MafiaToolkit.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Gibbed.IO"><HintPath>..\..\02-ferramentas\MafiaToolkit\Gibbed.IO.dll</HintPath><Private>false</Private></Reference>
+  </ItemGroup>
+</Project>

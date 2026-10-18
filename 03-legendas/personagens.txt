@@ -1,0 +1,8 @@
+116	n_
+5	Mission failed
+3	Activate job
+2	Transporter job
+1	Action-Packed Gameplay
+1	Epic Gangster Story
+1	Twitter
+1	Facebook

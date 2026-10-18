@@ -1,0 +1,29 @@
+id	texto	voz
+# Ajustes manuais da dublagem. Uma fala por linha: id da fala, texto falado (vazio = mantem), voz (vazio = mantem).
+# Texto "=" mantem o audio original. Vozes: antonio, antonio_grave, antonio_agudo, francisca, thalita.
+# Depois de editar: node 02-ferramentas\gerar-roteiros.mjs e node 02-ferramentas\dublar-lote.mjs (so refaz os SDS afetados).
+# --- 17/10/2026: cutscenes que passavam do tempo original (sincronia labial) - texto encurtado
+07_01_00_0090	Vai precisar de grana até entrar no ritmo de novo.
+08_01_00_0040	Arrumamos outro serviço!
+08_03_00_0160	E como vamos fazer?
+09_01_00_0110	Pra onde ele vai?
+09_04_00_0030	Mandou eu voltar quando terminasse. Acha que tô feliz?
+09_04_00_0050	Fiz o necessário.
+09_05_00_0470	Deve estar se perguntando por que arrisquei, depois de sete anos preso.
+10_01_00_0040	O Joe disse que você precisava de ajuda e, como fui bem contra os brilhantinas, posso ir de novo.
+10_01_00_0070	Bom dia, Falcone.
+10_10_00_0230	Acha que na guerra foi diferente?
+10_11_00_0390	Veio de carro?
+11_03_00_0210	Merda... O Henry não pode me ver! Temos que nos esconder, rápido, antes que ele suba.
+11_06_00_0011	Anda! Pra debaixo da cama.
+11_07_00_0031	Chega pra lá!
+11_11_05_0190	Se o desgraçado não voltar hoje pedindo desculpas, me liga. Mas acho que não vai precisar.
+12_01_00_0130	O Carlo não vai saber. E, se souber, no máximo ameaça e pede uma fatia.
+12_01_00_0190	E nós somos os intermediários.
+# --- 17/10/2026: Joe's Adventures - homens gritando/implorando que o tom alto mandou para voz feminina
+21_99_01_0020		antonio_agudo
+21_99_01_0131		antonio_agudo
+21_99_07_0015		antonio_agudo
+21_99_07_0030		antonio_agudo
+21_99_07_0050		antonio_agudo
+21_99_10_0020		antonio_agudo

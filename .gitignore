@@ -1,0 +1,66 @@
+# ---------------------------------------------------------------
+# Arquivos do jogo e derivados (direitos da 2K) — nunca versionar
+# ---------------------------------------------------------------
+*.sds
+*.fsb
+*.fsb5
+*.bik
+*.wav
+*.mp3
+*.ogg
+*.bin
+*.dat
+
+# Extrações de áudio, caches de TTS e saídas de lote
+04-export/
+08-repack/*
+!08-repack/SdsTool/
+!08-repack/*.ps1
+10-pacote/Mafia2DE-Dublagem-PTBR/dublagem/
+
+# Texto extraído do jogo (legendas oficiais / roteiros). Regenerável com os scripts.
+03-legendas/falas-*.csv
+03-legendas/legendas-oficiais-pt.csv
+03-legendas/roteiros/
+10-pacote/Mafia2DE-Dublagem-PTBR/traducoes/roteiros-por-sds/
+
+# Projeto Ghidra (contém o executável do jogo analisado) — só os scripts entram
+00-planejamento/ghidra/*
+!00-planejamento/ghidra/scripts/
+
+# ---------------------------------------------------------------
+# Ferramentas de terceiros, modelos e bibliotecas (baixar à parte)
+# ---------------------------------------------------------------
+02-ferramentas/MafiaToolkit/
+02-ferramentas/MafiaToolkit-*.zip
+node_modules/
+__pycache__/
+_pylib/
+_pylib_ort/
+_vcrt/
+_modelos/
+10-tts-local/modelos/
+*.onnx
+
+# Saídas intermediárias das sondagens (scratch)
+02-ferramentas/*.json
+!02-ferramentas/package.json
+!02-ferramentas/package-lock.json
+
+# Builds .NET
+bin/
+obj/
+06-fmod/Fsb5Batch/Filho/
+
+# Logs
+*.log
+*.err
+_status.txt
+instalador.log
+
+# Pacotes de distribuição (contêm os .sds do jogo)
+*.zip
+*.7z
+
+# Páginas de comparação de vozes (dependem dos WAVs do jogo)
+11-amostras-vozes/

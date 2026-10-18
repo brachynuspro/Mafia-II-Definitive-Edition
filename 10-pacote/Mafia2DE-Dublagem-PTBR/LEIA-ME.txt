@@ -1,0 +1,123 @@
+﻿DUBLAGEM PT-BR - MAFIA II: DEFINITIVE EDITION
+=============================================
+
+Dublagem não oficial em português do Brasil, feita com vozes sintéticas (TTS),
+com as falas encaixadas no tempo do áudio original em inglês.
+
+Inclui:
+  - Todas as cutscenes e diálogos de missão da campanha e das DLCs.
+  - Falas da cidade: pedestres, policiais, lojistas, bartenders, frentistas,
+    jornaleiros e o noticiário da rádio.
+  - 677 arquivos de áudio do jogo (.sds), cerca de 14 mil falas.
+  - Voz própria para cada personagem principal, de acordo com a idade e o
+    jeito de cada um: Vito, Joe, Henry, Eddie, Falcone, Leo, Mike Bruski,
+    Bruno, Giuseppe, Francesca e a mãe do Vito (os mais velhos com voz mais
+    grave e fala mais lenta).
+
+Gritos, gemidos, risadas e as falas em italiano e cantonês mantêm o áudio
+original, como na versão em inglês.
+
+
+COMO INSTALAR
+-------------
+Feche o jogo antes de instalar. Extraia o pacote inteiro (não separe as pastas).
+
+  Windows: clique duas vezes em  instalar-windows.bat
+  Linux:   abra um terminal nesta pasta e rode:  bash instalar-linux.sh
+           Bazzite / SteamOS / Steam Deck / ROG Ally / Legion Go:
+             1. Entre no Modo Desktop (botão Steam > Ligar/Desligar >
+                Mudar para o Desktop).
+             2. Abra esta pasta no Dolphin, clique com o botão direito no
+                espaço vazio > "Abrir terminal aqui" (ou abra o Konsole).
+                O teclado da tela abre com Steam + X.
+             3. Rode:  bash instalar-linux.sh
+           Ubuntu, Mint, Pop!_OS, Fedora, Nobara, Arch, CachyOS, Manjaro,
+           openSUSE etc.: abra o terminal nesta pasta e rode o mesmo comando.
+           Funciona com a Steam nativa, Flatpak ou Snap. Não use sudo.
+  macOS:   clique duas vezes em  instalar-mac.command
+           (se o Mac bloquear: botão direito > Abrir; ou no Terminal:
+            python3 instalar.py)
+
+O instalador do Linux reconhece a distribuição e o aparelho, mostra o que
+encontrou e pergunta antes de fechar a Steam. Opções diretas:
+  bash instalar-linux.sh --instalar    instala sem menu
+  bash instalar-linux.sh --idioma      só corrige o idioma
+  bash instalar-linux.sh --remover     restaura os originais
+  bash instalar-linux.sh --diag        só mostra o diagnóstico, sem mudar nada
+  (acrescente --sim para responder "sim" sozinho, e --jogo <pasta> para
+   indicar a pasta do jogo)
+
+O instalador:
+  1. Procura a pasta do jogo sozinho (inclusive em outras bibliotecas da
+     Steam, cartão SD, Steam Flatpak e Snap). Se não achar, escolha a pasta
+     do jogo: é a que contém a subpasta "pc"
+     (ex.: ...\steamapps\common\Mafia II Definitive Edition).
+  2. Oferece: instalar, remover, ou só ativar o português.
+  3. Guarda os arquivos originais em  <pasta do jogo>\DublagemPTBR-backup
+     antes de trocar qualquer coisa.
+  4. Muda o idioma do jogo para português (Brasil) em DOIS lugares:
+     - na Steam (idioma do jogo). O launcher do jogo usa esse idioma para
+       criar o perfil na primeira vez que o jogo abre. A Steam precisa estar
+       FECHADA para o instalador mudar isso; se estiver aberta, ele avisa e
+       você muda na mão: Steam > Biblioteca > Mafia II: Definitive Edition >
+       Propriedades > Geral > Idioma > Português (Brasil);
+     - no arquivo settings.xml de cada perfil que já existir.
+  5. Tira de  pc\sds  um arquivo "info" de outro idioma, se houver. Ele não
+     vem da Steam (costuma sobrar de outra tradução) e faz o jogo carregar o
+     inglês mesmo com tudo em português. Fica guardado no backup e volta para
+     o lugar se você remover a dublagem.
+
+Linux: o jogo roda pelo Proton; o instalador procura o prefixo do Proton
+       (steamapps/compatdata/1030830) em todas as bibliotecas e na pasta
+       pessoal (no Bazzite/Steam Deck ele fica na memória interna mesmo com o
+       jogo no cartão SD) e ativa o português em todos os perfis que achar.
+       Ele também avisa sobre o disco do jogo: cartão/HD do Windows (NTFS)
+       funciona bem no Bazzite e no SteamOS; nas outras distribuições, se o
+       jogo der erro, mova-o para um disco Linux pela Steam.
+       Jogo sempre em inglês? Rode a opção 3 (ou --idioma).
+macOS: o jogo não tem versão para Mac; funciona com CrossOver, Whisky ou Wine.
+       Aponte para a pasta do jogo dentro da garrafa (drive_c/...).
+
+
+COMO REMOVER
+------------
+Rode o instalador de novo e escolha a opção 2. Os arquivos originais e o
+idioma anterior são restaurados. Se o backup tiver sido apagado, use na Steam:
+Propriedades > Arquivos instalados > Verificar integridade dos arquivos.
+
+Depois de uma atualização do jogo pela Steam, pode ser preciso instalar de novo.
+
+
+DEU ERRO?
+---------
+"Permissão negada": no Linux rode sempre com  bash instalar-linux.sh  e no
+macOS com  python3 instalar.py  (não com ./). Assim funciona mesmo se o arquivo
+perdeu a permissão de execução ou se a pasta está num pendrive/cartão SD.
+Não precisa de sudo (se usar, o instalador volta a rodar como o seu usuário).
+
+"Disco só para leitura" (HD do Windows no Linux): no Windows, desligue a
+"Inicialização rápida" e desligue o PC em vez de hibernar.
+
+Tudo o que o instalador fez fica registrado nesta pasta, em
+instalador-linux.log (Linux) ou instalador.log (macOS). Mande esse arquivo
+junto ao relatar o problema; no Linux, rode antes  bash instalar-linux.sh --diag.
+
+
+CONTEÚDO DO PACOTE
+------------------
+  dublagem\pc\sds\      falas da cidade (usadas pelo jogo em qualquer idioma)
+  dublagem\pc\sds_br\   cutscenes e missões do pacote em português
+  traducoes\falas-de-rua\       transcrição em inglês -> tradução (en<TAB>pt)
+  traducoes\roteiros-por-sds\   roteiro de cada arquivo: id da fala; voz; texto
+  traducoes\ajustes-dublagem.tsv  ajustes manuais (textos encurtados etc.)
+  instalar-linux.sh     instalador para Linux (Bazzite, SteamOS e distribuições comuns)
+  instalar.py           instalador para macOS (precisa de Python 3); no Linux, abre o instalar-linux.sh
+  instalador\           script usado pelo instalador do Windows
+
+
+AVISO
+-----
+Projeto de fãs, sem fins comerciais e sem ligação com a 2K Games, a Hangar 13
+ou a 2K Czech. Mafia II é marca dos seus respectivos donos. Os arquivos .sds
+deste pacote são versões modificadas dos arquivos do próprio jogo: é preciso
+ter o jogo original para usar.
